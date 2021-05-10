@@ -5,7 +5,6 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class Ticker {
 
-
     private Currency base; // change to enum
     private Currency target; // change to enum
     private Double price;

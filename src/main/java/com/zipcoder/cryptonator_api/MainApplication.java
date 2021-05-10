@@ -19,19 +19,19 @@ public class MainApplication {
         return builder.build();
     }
 
-    @Bean
-    public CommandLineRunner run(RestTemplate restTemplate) {
-        return args -> {
-            this.sampleFetch(restTemplate);
-        };
-    }
-
-    private void sampleFetch(RestTemplate restTemplate) {
-        String uriString = "https://api.cryptonator.com/api/ticker/btc-usd";
-        System.out.println("Fetching object from cryptonator.com");
-        System.out.println("Attempting to retrieve object from URI...");
-        System.out.println(uriString);
-        Object jsonObject = restTemplate.getForObject(uriString, Object.class);
-        System.out.println(jsonObject.toString());
-    }
+//    @Bean
+//    public CommandLineRunner run(RestTemplate restTemplate) {
+//        return args -> {
+//            this.sampleFetch(restTemplate);
+//        };
+//    }
+//
+//    private void sampleFetch(RestTemplate restTemplate) {
+//        String uriString = "https://api.cryptonator.com/api/ticker/btc-usd";
+//        System.out.println("Fetching object from cryptonator.com");
+//        System.out.println("Attempting to retrieve object from URI...");
+//        System.out.println(uriString);
+//        Object jsonObject = restTemplate.getForObject(uriString, Object.class);
+//        System.out.println(jsonObject.toString());
+//    }
 }
